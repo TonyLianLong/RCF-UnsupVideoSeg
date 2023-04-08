@@ -8,11 +8,11 @@ by [Long Lian](https://tonylian.com/), [Zhirong Wu](https://scholar.google.com/c
 
 [Project Page (Coming soon)] | [[Demo Video](http://people.eecs.berkeley.edu/~longlian/RCF_video.html)] | [[PDF](http://people.eecs.berkeley.edu/~longlian/CVPR_2023_RCF.pdf)] | [[Supp PDF](http://people.eecs.berkeley.edu/~longlian/CVPR_2023_RCF_Supp.pdf)] | [[Citation](#citation)]
 
-
 **Non-cherry picked** segmentation masks on every frame, every sequence on DAVIS16:
+
 ![Segmentation Masks](assets/output.gif)
 
-\* Inference done *per-frame* without post-processing for temporal consistency.
+\* Inference in this demo is done *per-frame* without post-processing for temporal consistency.
 
 ### **This GIF has been significantly compressed. [Check out our full video here.](http://people.eecs.berkeley.edu/~longlian/RCF_video.html)**
 
