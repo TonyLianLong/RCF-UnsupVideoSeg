@@ -1,0 +1,30 @@
+JPEGImages/camel01/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg
+JPEGImages/cars1/ 00000.jpg 00009.jpg 00018.jpg
+JPEGImages/cars10/ 00000.jpg 00009.jpg 00019.jpg 00029.jpg
+JPEGImages/cars4/ 00000.jpg 00009.jpg 00019.jpg 00029.jpg 00039.jpg 00053.jpg
+JPEGImages/cars5/ 00000.jpg 00009.jpg 00019.jpg 00035.jpg
+JPEGImages/cats01/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg
+JPEGImages/cats03/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg
+JPEGImages/cats06/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg 00179.jpg 00199.jpg 00219.jpg 00239.jpg 00259.jpg 00279.jpg 00299.jpg 00319.jpg 00330.jpg
+JPEGImages/dogs01/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg 00179.jpg 00199.jpg
+JPEGImages/dogs02/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg 00179.jpg 00199.jpg 00219.jpg 00239.jpg 00259.jpg 00279.jpg 00299.jpg 00319.jpg 00339.jpg 00359.jpg 00379.jpg 00399.jpg 00419.jpg
+JPEGImages/farm01/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg 00179.jpg 00199.jpg 00219.jpg 00239.jpg 00251.jpg
+JPEGImages/giraffes01/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg 00179.jpg 00199.jpg 00219.jpg 00239.jpg 00259.jpg 00279.jpg 00299.jpg 00319.jpg
+JPEGImages/goats01/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg 00179.jpg 00199.jpg 00219.jpg 00239.jpg 00259.jpg 00279.jpg
+JPEGImages/horses02/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg 00179.jpg 00199.jpg 00219.jpg 00239.jpg
+JPEGImages/horses04/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg 00179.jpg 00199.jpg 00219.jpg 00239.jpg 00259.jpg 00279.jpg 00299.jpg 00319.jpg 00339.jpg 00359.jpg 00379.jpg 00399.jpg 00419.jpg 00439.jpg 00459.jpg 00479.jpg 00499.jpg 00519.jpg 00539.jpg 00559.jpg 00579.jpg 00599.jpg 00619.jpg 00639.jpg 00659.jpg 00679.jpg 00699.jpg 00719.jpg 00739.jpg 00759.jpg 00779.jpg 00799.jpg
+JPEGImages/horses05/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg 00179.jpg 00199.jpg 00239.jpg 00259.jpg 00279.jpg 00299.jpg 00319.jpg 00339.jpg 00359.jpg 00379.jpg 00399.jpg 00419.jpg 00439.jpg 00455.jpg
+JPEGImages/lion01/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00155.jpg
+JPEGImages/marple12/ 00000.jpg 00009.jpg 00019.jpg 00029.jpg 00039.jpg 00049.jpg 00099.jpg 00111.jpg
+JPEGImages/marple2/ 00000.jpg 00009.jpg 00019.jpg 00029.jpg 00039.jpg 00049.jpg 00109.jpg 00134.jpg 00169.jpg 00199.jpg 00249.jpg
+JPEGImages/marple4/ 00000.jpg 00009.jpg 00019.jpg 00029.jpg 00039.jpg
+JPEGImages/marple6/ 00000.jpg 00009.jpg 00019.jpg 00029.jpg 00039.jpg 00049.jpg 00099.jpg 00149.jpg 00199.jpg 00249.jpg 00299.jpg 00349.jpg 00399.jpg 00449.jpg 00499.jpg 00549.jpg 00599.jpg 00649.jpg 00699.jpg 00749.jpg 00799.jpg
+JPEGImages/marple7/ 00000.jpg 00009.jpg 00019.jpg 00029.jpg 00039.jpg 00049.jpg 00099.jpg 00149.jpg 00199.jpg 00249.jpg 00299.jpg 00349.jpg 00399.jpg 00449.jpg 00499.jpg 00527.jpg
+JPEGImages/marple9/ 00000.jpg 00009.jpg 00019.jpg 00029.jpg 00039.jpg 00049.jpg 00099.jpg 00122.jpg
+JPEGImages/people03/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg 00179.jpg
+JPEGImages/people1/ 00000.jpg 00009.jpg 00019.jpg 00029.jpg 00039.jpg
+JPEGImages/people2/ 00000.jpg 00009.jpg 00019.jpg 00029.jpg
+JPEGImages/rabbits02/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg 00179.jpg 00199.jpg 00219.jpg 00239.jpg 00259.jpg
+JPEGImages/rabbits03/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg 00179.jpg 00199.jpg 00219.jpg
+JPEGImages/rabbits04/ 00000.jpg 00019.jpg 00039.jpg 00059.jpg 00079.jpg 00099.jpg 00119.jpg 00139.jpg 00159.jpg 00179.jpg 00199.jpg 00219.jpg 00239.jpg 00259.jpg 00279.jpg 00299.jpg
+JPEGImages/tennis/ 00000.jpg 00009.jpg 00019.jpg 00029.jpg 00036.jpg 00039.jpg 00049.jpg 00099.jpg 00149.jpg 00199.jpg 00249.jpg 00299.jpg 00349.jpg 00399.jpg 00449.jpg 00465.jpg

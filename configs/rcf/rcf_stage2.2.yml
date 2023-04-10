@@ -1,0 +1,160 @@
+# Uses pre-extracted flows.
+# Training set is DAVIS trainval.
+batch_size: 8
+epochs: 20
+optimizer: Adam
+# Changed the learning rate:
+# original: 1.e-4
+learning_rate: 1.e-5
+weight_decay: 1.e-4
+
+workers: 16
+
+checkpoints_dir: saved/saved_rcf_stage2.2
+model_cls: RCFModel
+
+eval_pos_th: 0.35
+
+disable_wandb: true
+allow_overwriting_checkpoints_dir: false
+
+train_transform_kwargs:
+  strong_aug: true
+  has_pl: true
+
+test_transform_kwargs:
+  strong_aug: false
+
+loss_log_interval: 100
+
+# Use DAVIS as training set
+data_path: ./data/data_davis
+dataset_kwargs: {}
+
+train_dataset_kwargs:
+  frame_num: 2
+  load_flow: true
+  load_pl: true
+  # May need to override this due to different object channel
+  pl_root: saved/saved_rcf_stage2.1/saved_eval_export_trainval_ema_torchcrf_ncut_torchcrf/0
+  flow_suffix: "_NewCT"
+  split: trainval.txt
+  zero_ann: false
+
+test_dataset_kwargs:
+  frame_num: 1
+  load_flow: false
+  split: val.txt
+  zero_ann: false
+
+lr_scheduler_kwargs:
+  # policy: 'poly'
+  power: 0.9
+  min_lr: 1.e-6
+
+# Get object channel after 1 epoch
+set_object_channel_after_epoch: 2
+
+trainer_kwargs:
+  check_val_every_n_epoch: 1
+  amp_backend: "native"
+  precision: 32
+  # Enable cudnn benchmark
+  benchmark: true
+
+model_kwargs:
+  # Smaller segmentation loss from motion
+  w_seg: 0.1
+  # Use entropy and do not use sharpen
+  w_sharpen: 0
+  w_entropy: 0
+  # Use different last convolution for fw and bw residual
+  separate_residual: true
+  # Use PL
+  w_pl: 2.0
+  pl_pos_weight: 2.
+  pl_neg_weight: 1.
+
+  align_corners: false
+  mask_size: [96, 96]
+  backbone2:
+    # Changed to v2.1
+    # dilations: [1, 1, 1, 2]
+    dilations: [1, 1, 2, 4]
+    strides: [1, 2, 1, 1]
+    type: ResNet
+    depth: 50
+    num_stages: 4
+    out_indices: [0, 1, 2, 3]
+    norm_cfg: &id001
+      type: SyncBN
+      requires_grad: true
+    norm_eval: false
+    style: pytorch
+    # Changed to v2.1
+    # contract_dilation: false
+    contract_dilation: true
+    create_ema: true
+  decode_head:
+    ssim_sz: 1
+    create_flownet: true
+    mask_layer: 4
+    type: FlowAggregationHeadWithResidual
+    flow_feat_before_agg_kernel_size: 3
+    num_flow_feat_channels: 64
+    mask_size: [96, 96]
+    norm_flow: false
+    clamp_flow_t: 20.
+    free_residual: true
+    allow_residual_resize: true
+    residual_adjustment_scale: 10.
+    # Default value: put here to allow overriding from command line
+    # This is the division coefficient before tanh.
+    pred_div_coeff: 10.
+  decode_head2:
+    input_transform: resize_concat
+    concat_input: false
+    dilation: 6
+    channels: 256
+    type: FCNHead
+    in_channels: [256, 2048]
+    in_index: [0, 3]
+    num_convs: 2
+    dropout_ratio: 0.1
+    num_classes: 4
+    norm_cfg: *id001
+    align_corners: false
+    create_ema: true
+    loss_decode:
+      type: CrossEntropyLoss
+      use_sigmoid: false
+      loss_weight: 1.0
+  decode_head3:
+    concat_input: false
+    dilation: 6
+    channels: 256
+    type: FCNHead
+    in_channels: 4096
+    # Only use the last map
+    in_index: -1
+    num_convs: 2
+    dropout_ratio: 0.1
+    # in_channel is 4096 (2048 * 2 as we have two frames) as in the original one
+    # Predicted residual is 48x48, resize in `decode_head` with `allow_residual_resize`
+    # Output dimension is 16 because we need to split to fw and bw
+    num_classes: 16
+    norm_cfg: *id001
+    align_corners: false
+    loss_decode:
+      type: CrossEntropyLoss
+      use_sigmoid: false
+      loss_weight: 1.0
+  mask_layer: 4
+
+eval_save: true
+# export depends on save
+eval_export: true
+
+# Please set:
+object_channel: 0
+pretrained_model: saved/saved_rcf_stage2.1/last.ckpt

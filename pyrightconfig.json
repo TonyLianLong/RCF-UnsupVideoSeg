@@ -1,0 +1,10 @@
+{
+    "exclude": [
+      "**/data",
+      "**/saved*",
+      "**/.crash_reports",
+      "**/runs",
+      "**/wandb",
+      ".git"
+    ]
+}

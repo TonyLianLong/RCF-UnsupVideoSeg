@@ -1,0 +1,113 @@
+batch_size: 8
+epochs: 8
+learning_rate: 1.e-4
+optimizer: Adam
+weight_decay: 1.e-6
+
+workers: 16
+
+checkpoints_dir: saved/saved_amd
+
+pretrained_model: null
+model_cls: AMDModel
+eval_save: true
+eval_pos_th: 0.35
+
+# export depends on save
+eval_export: false
+export_all_seg: false
+
+disable_wandb: true
+allow_overwriting_checkpoints_dir: false
+
+train_transform_kwargs:
+  strong_aug: false
+  has_flow: false
+
+test_transform_kwargs:
+  strong_aug: false
+  has_flow: false
+
+loss_log_interval: 100
+
+object_channel: null
+
+dataset_kwargs: {}
+
+data_path: ./data/youtube-vos
+test_data_path: ./data/data_davis
+
+train_dataset_kwargs:
+  frame_num: 2
+  split: ytb2019_train.txt
+
+test_dataset_kwargs:
+  frame_num: 1
+  split: val.txt
+
+lr_scheduler_kwargs:
+  # policy: 'poly'
+  power: 0.9
+  min_lr: 1.e-6
+
+trainer_kwargs:
+  check_val_every_n_epoch: -1
+  amp_backend: "native"
+  precision: 32
+
+model_kwargs:
+  # type: EncoderDecoder
+  w_seg: 1.0
+  mask_layer: 5
+  log_interval: 1000
+  backbone2:
+    dilations: [1, 1, 1, 2]
+    strides: [1, 2, 1, 1]
+    type: ResNet
+    depth: 50
+    num_stages: 4
+    out_indices: [0, 1, 2, 3]
+    norm_cfg: &id001
+      type: SyncBN
+      requires_grad: true
+    norm_eval: false
+    style: pytorch
+    contract_dilation: false
+  decode_head:
+    ssim_sz: 1
+    create_flownet: true
+    flow_model_path: ''
+    freeze_flownet: false
+    load_flownet: false
+    mask_layer: 5
+    concat_input: false
+    dilation: 6
+    channels: 128
+    type: FCNHead
+    in_channels: 2048
+    in_index: 3
+    num_convs: 8
+    dropout_ratio: 0.1
+    num_classes: 24
+    norm_cfg: *id001
+    align_corners: false
+    loss_decode:
+      type: CrossEntropyLoss
+      use_sigmoid: false
+      loss_weight: 1.0
+  decode_head2:
+    concat_input: false
+    dilation: 6
+    channels: 256
+    type: FCNHead
+    in_channels: 2048
+    in_index: 3
+    num_convs: 2
+    dropout_ratio: 0.1
+    num_classes: 5
+    norm_cfg: *id001
+    align_corners: false
+    loss_decode:
+      type: CrossEntropyLoss
+      use_sigmoid: false
+      loss_weight: 1.0
