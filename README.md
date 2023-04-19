@@ -20,8 +20,20 @@ by [Long Lian](https://tonylian.com/), [Zhirong Wu](https://scholar.google.com/c
 ## Data Preparation
 ### Prepare data and pretrained weights
 Download [DAVIS 2016](https://graphics.ethz.ch/Downloads/Data/Davis/DAVIS-data.zip) and unzip to `data/data_davis`.
-Download [pre-extracted flow from RAFT](https://drive.google.com/file/d/1LHGYaozBGGF879lJd3JqaGQKA7oQBbfm/view?usp=sharing) (trained with chairs and things) and decompress to `data/data_davis`.
+
+Download [pre-extracted flow from RAFT](https://drive.google.com/file/d/1LHGYaozBGGF879lJd3JqaGQKA7oQBbfm/view) (trained with chairs and things) and decompress to `data/data_davis`.
+
 Download [DenseCL ResNet50 weights](https://cloudstor.aarnet.edu.au/plus/s/hdAg5RYm8NNM2QP/download) to `data/pretrained/densecl_r50_imagenet_200ep.pth`.
+
+<details>
+<summary>SegTrackv2 and FBMS59 dataset</summary>
+
+These two datasets have much lower quality and very different aspect ratios across sequences. To make things easier, we resize to 480p (854x480) to have the same input size as DAVIS 2016. For fairness, the testing is still on the original dataset, and we provide both the original and scaled datasets (with flows on the scaled datasets). The configs are mainly designed for DAVIS, and shorter training is recommended for these two datasets. There are also larger inter-run variations on these two datasets compared to DAVIS 2016 since the video quality is lower. Updates for settings and instructions for these two datasets coming soon.
+
+Download [SegTrackv2 with pre-extracted flow](https://drive.google.com/file/d/1_EhVYF81MbJj7PyiJphjjcbEUmDvfDyV/view).
+
+Download [FBMS59 with pre-extracted flow](https://drive.google.com/file/d/1Vom-Z1QKdMxugz0pm2N7Ik8XmtvAbMd6/view).
+</details>
 
 ### Install dependencies and `torchCRF`
 The `requirements.txt` assumes CUDA 11.x. You can also install torch and torchvision from conda instead of pip.
