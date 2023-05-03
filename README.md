@@ -6,7 +6,7 @@ by [Long Lian](https://tonylian.com/), [Zhirong Wu](https://scholar.google.com/c
 
 <em>The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023.</em>
 
-[[Paper](https://arxiv.org/abs/2304.08025)] | [Project Page (Coming soon)] | [Colab (Coming soon)] | [[Demo Video](http://people.eecs.berkeley.edu/~longlian/RCF_video.html)] | [[Citation](#citation)]
+[[Paper](https://arxiv.org/abs/2304.08025)] | [[Project Page](https://rcf-video.github.io/)] | [Colab (Coming soon)] | [[Demo Video](http://people.eecs.berkeley.edu/~longlian/RCF_video.html)] | [[Citation](#citation)]
 
 ### **Non-cherry picked** segmentation predictions on all sequences on DAVIS16:
 
