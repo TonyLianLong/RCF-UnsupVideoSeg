@@ -148,11 +148,13 @@ Please give us a star 🌟 on Github to support us!
 
 Please cite our work if you find our work inspiring or use our code in your work:
 ```
-@article{lian2023bootstrapping,
-  title={Bootstrapping Objectness from Videos by Relaxed Common Fate and Visual Grouping},
-  author={Lian, Long and Wu, Zhirong and Yu, Stella X},
-  journal={arXiv preprint arXiv:2304.08025},
-  year={2023}
+@InProceedings{Lian_2023_CVPR,
+    author    = {Lian, Long and Wu, Zhirong and Yu, Stella X.},
+    title     = {Bootstrapping Objectness From Videos by Relaxed Common Fate and Visual Grouping},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {14582-14591}
 }
 
 @article{lian2022improving,
