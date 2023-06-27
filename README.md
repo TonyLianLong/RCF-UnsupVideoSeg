@@ -8,6 +8,8 @@ by [Long Lian](https://tonylian.com/), [Zhirong Wu](https://scholar.google.com/c
 
 [[Paper](https://arxiv.org/abs/2304.08025)] | [[Project Page](https://rcf-video.github.io/)] | [Colab (Coming soon)] | [[Demo Video](http://people.eecs.berkeley.edu/~longlian/RCF_video.html)] | [[Citation](#citation)]
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bootstrapping-objectness-from-videos-by/unsupervised-object-segmentation-on-davis)](https://paperswithcode.com/sota/unsupervised-object-segmentation-on-davis?p=bootstrapping-objectness-from-videos-by)
+
 ### **Non-cherry picked** segmentation predictions on all sequences on DAVIS16:
 
 ![Segmentation Masks](assets/output.gif)
