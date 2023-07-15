@@ -280,7 +280,7 @@ if __name__ == "__main__":
         description='Evaluate motion-appearance alignment.')
     parser.add_argument('--pretrain_dir', help='path to pretraining dir',
                         default=None, type=str)
-    parser.add_argument('--first-frames-only', help='override pretrained model and checkpoints directory at test',
+    parser.add_argument('--first-frames-only', help='use the first frame of each sequence only',
                         action='store_true')
     parser.add_argument('--num-channels', default=4, type=int)
     parser.add_argument('--object-channel', default=None, type=int,
