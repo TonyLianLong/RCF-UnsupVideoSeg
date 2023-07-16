@@ -1,0 +1,37 @@
+# This exports trainval on models without ema.
+
+base_config: rcf_stage1.yaml
+batch_size: 2
+workers: 6
+
+disable_wandb: true
+# This is to allow existing saved dir
+allow_overwriting_checkpoints_dir: true
+
+data_path: ./data/data_SegTrackv2_resized
+
+checkpoints_dir: saved_stv2/saved_rcf
+pretrained_model: saved_stv2/saved_rcf/last.ckpt
+object_channel: 1
+
+# Use trainval to evaluate is for exporting
+
+train_dataset_kwargs:
+  frame_num: 2
+  load_flow: true
+  split: trainval.txt
+
+test_dataset_kwargs:
+  frame_num: 1
+  load_flow: false
+  split: trainval.txt
+
+# In validation, it's save_eval
+saved_eval_dir_name: saved_eval_test
+saved_eval_export_dir_name: saved_eval_export_trainval
+
+eval_pos_th: -1
+eval_save: true
+# export depends on save
+eval_export: true
+export_all_seg: true

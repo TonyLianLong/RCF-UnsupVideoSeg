@@ -386,7 +386,7 @@ def main():
 
     parser = argparse.ArgumentParser(description='Train segmentation.')
     parser.add_argument('config', metavar='C', type=str, nargs='?',
-                        help='path for config', default='configs/rcf/rcf_stage1.yml')
+                        help='path to config', default='configs/rcf/rcf_stage1.yaml')
     parser.add_argument('--test', help='test only',
                         default=False, action="store_true")
     parser.add_argument('--test-override-pretrained', help='override pretrained model and checkpoints directory at test',
